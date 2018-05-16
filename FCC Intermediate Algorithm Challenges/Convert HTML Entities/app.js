@@ -1,5 +1,6 @@
 
 function convertHTML(str) {
+  // Store the key and values
   var html = {
     '&': '&amp;',
     '<': '&lt;',
@@ -8,6 +9,7 @@ function convertHTML(str) {
     '\'': '&apos;'
   };
   
+  // Split str into array and use the map function to map each letter
   return str.split('').map(function(letter) {
     return html[letter] || letter;
   }).join('');
